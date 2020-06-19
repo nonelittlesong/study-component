@@ -9,20 +9,20 @@
 }
 
 .logo-text{
-	color: #ffffff;
-	font-size: 15px;
-	display: inline-block;
-	text-transform: uppercase;
-	position: relative;
-    top: 3px;
-	font-weight: 400;
-	text-align: center;
-    line-height:50px;
-    width: 100px;
+  color: #ffffff;
+  font-size: 15px;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  top: 3px;
+  font-weight: 400;
+  text-align: center;
+  line-height:50px;
+  width: calc(100% -41px);
 }
 
 .logo-icon{
-    width: 40px;
-    height: 40px;
-    margin-right: 1px;
+  width: 40px;
+  height: 40px;
+  margin-right: 1px;
 }
