@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>实现带动画下拉框的 Dropdown/Selector</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Add your code here. -->
+  <dl class="dropdown">
+    <dt>
+      <a href="#">
+        <span class="hida">Select</span>
+        <p class="multiSel"></p>
+      </a>
+    </dt>
+    <dd>
+      <div class="multiSelect">
+        <ul id="hehe">
+          <li>
+            <input type="checkbox" value="VOC" />VOC</li>
+          <li>
+            <input type="checkbox" value="COCO" />COCO</li>
+          <li>
+            <input type="checkbox" value="YOLO" />YOLO</li>
+        </ul>
+      </div>
+    </dd>
+    <Button>Filter</Button>
+  </dl>
+  <script src="./jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
