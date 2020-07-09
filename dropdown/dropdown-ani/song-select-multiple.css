@@ -1,3 +1,10 @@
+[class^="song-"], [class*="song-"], [class^="song-"] *, [class*="song-"] *,
+[class^="song-"] ::before, [class*="song-"] ::before,
+[class^="song-"] ::after, [class*="song-"] ::after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 .song-select {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -41,6 +48,7 @@
 	content: '\a0';
 }
 
+/*** focus ***/
 .song-select-focused.song-select-multiple .song-select-selector {
   border-color: #40a9ff;
   border-right-width: 1px !important;
@@ -51,4 +59,147 @@
 .song-select:not(.song-select-disabled):hover .song-select-selector {
   border-color: #40a9ff;
   border-right-width: 1px !important;
+}
+
+/*** tag ***/
+.song-select-selection-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; /* 项目缩放比例 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* 超出的文本用省略号代替 */
+}
+
+.song-select-multiple .song-select-selection-item {
+  position: relative;
+  display: flex;
+  -webkit-box-flex: 0;
+  flex: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 24px;
+  margin-top: 2px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  padding: 0 4px 0 8px;
+  line-height: 22px;
+  background: #f5f5f5;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  cursor: default;
+  -webkit-transition: font-size .3s, line-height .3s, height .3s;
+  transition: font-size .3s, line-height .3s, height .3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.song-select-multiple .song-select-selection-item-content {
+  display: inline-block;
+  margin-right: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.song-select-multiple .song-select-selection-item-remove {
+  color: rgba(0, 0, 0, .45);
+  font-style: normal;
+  line-height: inherit;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -.125em;
+  text-rendering: optimizeLegibility;
+  font-size: 10px;
+  display: inline-block;
+}
+
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -.125em;
+  text-rendering: optimizeLegibility;
+}
+
+.song-select-multiple .song-select-selection-item-remove > * {
+  line-height: 1;
+}
+
+.song-select-multiple .song-select-selection-item-remove > .anticon {
+  vertical-align: -.2em;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.song-select-multiple .song-select-selection-item-remove svg {
+  display: inline-block;
+}
+
+/*** search ***/
+.song-select-multiple .song-select-selection-search {
+  position: relative;
+  margin-left: .5px;
+}
+
+input, button, select, optgroup, textarea {
+	margin: 0;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+}
+
+button, input {
+	overflow: visible;
+}
+
+a, area, button, [role="button"], input:not([type="range"]), label, select, summary, textarea {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+
+.song-select-multiple .song-select-selection-search-input, .song-select-multiple .song-select-selection-search-mirror {
+	font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;
+	line-height: 1.5715;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.song-select-multiple .song-select-selection-search-input {
+	width: 100%;
+	min-width: 3px;
+}
+
+.song-select-multiple .song-select-selector .song-select-selection-search-input {
+	margin: 0;
+	padding: 0;
+	background: 0 0;
+	border: none;
+	outline: none;
+}
+
+.song-select-show-search.song-select-multiple .song-select-selector input {
+	cursor: auto;
+}
+
+.song-select-multiple .song-select-selection-search-mirror {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	white-space: nowrap;
+	visibility: hidden;
 }
