@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - To Do List - Task Animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <header>
+    <span><i class="fa fa-arrow-left"></i><span class="sr-only">Back</span></span>
+    <h3>Today</h3>
+    <div class="task-indicators">
+      <span>5</span>
+      <span><i class="fa fa-check"></i>12</span>
+    </div>
+  </header>
+
+  <section class="task-list current">
+    <h2>Do it now!</h2>
+    <ul>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_00">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Cool task</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016 - h 9:30 am</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_00">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Cool task</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016 - h 9:30 am</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_01">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Another task which takes more than one line</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_02">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Cool task</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="task-list notcurrent">
+    <h3>Do it later</h3>
+    <ul>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_03">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Cool task</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_03">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Cool task</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+      <li>
+        <div class="checkbox">
+          <div class="check">
+            <input type="checkbox" name="task_04">
+            <div class="ripple-container">
+              <div class="check-off"></div>
+              <div class="check-on"><i class="fa fa-check"></i></div>
+              <div class="check-ripple"></div>
+            </div>
+          </div>
+          <div class="label">
+            <mark>Cool task</mark>
+            <br>
+            <time datetime="05-12-2016">12 March 2016</time>
+          </div>
+        </div>
+        <span class="task-msg">Well done!</span>
+      </li>
+    </ul>
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
