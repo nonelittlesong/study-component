@@ -1,0 +1,339 @@
+.pumpkin-love {
+    --c-background: #F6B360;
+    --c-lines: #D69648;
+    --c-parts: #7C4910;
+    --c-green: #8EBD2F;
+    --c-green-dark: #5B9936;
+    --c-green-light: #C8E237;
+    --c-pink: #F879CA;
+    --c-pink-dark: #E34BA2;
+    --c-pink-light: #FFB6EE;
+    --c-orange: #FFB53A;
+    --c-orange-dark: #F88029;
+    --c-orange-light: #FFE675;
+    //
+    --scale: 1;
+    --opacity: .75;
+    --side-x: 20px;
+    --top-y: 0px;
+    --top-rotate: 0deg;
+    --middle-scale: .64;
+    --middle-scale-x: .9;
+    --top-line-scale: 0;
+    --line-offset: 66px;
+    --eye-position: 0px;
+    --mouth-position: -17px;
+    --eye-scale: 0;
+    --nose-scale: 0;
+    --mouth-scale: 0;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    opacity: var(--opacity);
+    transform: scale(var(--scale)) translateZ(0);
+    &.active {
+        --opacity: 1;
+    }
+    svg {
+        display: block;
+    }
+    .side {
+        width: 45px;
+        height: 72px;
+        fill: var(--c-background);
+        position: absolute;
+        top: 6px;
+        &.left {
+            right: 44px;
+            transform: translateX(var(--side-x));
+        }
+        &.right {
+            left: 44px;
+            transform: translateX(calc(var(--side-x) * -1));
+        }
+    }
+    .middle {
+        position: relative;
+        transform-origin: 50% 61%;
+        transform: scaleX(var(--middle-scale-x)) scaleY(var(--middle-scale)) translateZ(0);
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            position: absolute;
+            top: 36px;
+            z-index: 3;
+            transform: scale(var(--eye-scale)) rotate(180deg) translateZ(0);
+            background: radial-gradient(circle at top center, transparent, transparent var(--eye-position), var(--c-parts) var(--eye-position), var(--c-parts));
+        }
+        &:before {
+            left: -2px;
+        }
+        &:after {
+            right: -2px;
+        }
+        .line {
+            width: 6px;
+            height: 66px;
+            fill: none;
+            stroke: var(--c-lines);
+            stroke-width: 1px;
+            stroke-linecap: round;
+            position: absolute;
+            top: 12px;
+            z-index: 2;
+            stroke-dasharray: 66px;
+            stroke-dashoffset: var(--line-offset);
+            &.left {
+                left: 0;
+            }
+            &.right {
+                right: 0;
+            }
+        }
+        .back {
+            width: 50px;
+            height: 84px;
+            fill: var(--c-lines);
+        }
+        .candy {
+            display: block;
+            height: 10px;
+            position: absolute;
+            left: 50%;
+            top: 12px;
+            &.rect {
+                width: 28px;
+                margin-left: -14px;
+            }
+            &.round {
+                width: 26px;
+                margin-left: -13px;
+            }
+            &.green {
+                .default {
+                    fill: var(--c-green);
+                }
+                .light {
+                    fill: var(--c-green-light);
+                }
+                .dark {
+                    fill: var(--c-green-dark);
+                }
+            }
+            &.pink {
+                .default {
+                    fill: var(--c-pink);
+                }
+                .light {
+                    fill: var(--c-pink-light);
+                }
+                .dark {
+                    fill: var(--c-pink-dark);
+                }
+            }
+            &.orange {
+                .default {
+                    fill: var(--c-orange);
+                }
+                .light {
+                    fill: var(--c-orange-light);
+                }
+                .dark {
+                    fill: var(--c-orange-dark);
+                }
+            }
+        }
+        .front {
+            width: 50px;
+            height: 72px;
+            fill: var(--c-background);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .top {
+            width: 46px;
+            height: 25px;
+            position: absolute;
+            left: 2px;
+            bottom: 66px;
+            z-index: 2;
+            transform: translateY(var(--top-y)) rotate(var(--top-rotate)) translateZ(0);
+            .back {
+                fill: var(--c-background);
+            }
+            .round,
+            .outer,
+            .inner {
+                transform-origin: 50% 100%;
+                transform: scale(var(--top-line-scale)) translateZ(0);
+            }
+            .round {
+                fill: none;
+                stroke: var(--c-lines);
+                stroke-width: 1px;
+                stroke-linecap: round;
+            }
+            .outer {
+                fill: var(--c-lines);
+            }
+            .inner {
+                fill: var(--c-parts);
+            }
+        }
+        .nose {
+            width: 12px;
+            height: 11px;
+            fill: var(--c-parts);
+            position: absolute;
+            left: 19px;
+            top: 36px;
+            z-index: 2;
+            transform: scale(var(--nose-scale)) translateZ(0);
+        }
+        .mouth {
+            position: absolute;
+            left: -5px;
+            top: 53px;
+            z-index: 3;
+            transform: scale(var(--mouth-scale)) translateZ(0);
+            &.normal,
+            svg {
+                width: 60px;
+                stroke: var(--c-parts);
+                stroke-width: 1.5px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            &.normal {
+                height: 6px;
+                fill: none;
+            }
+            &:not(.normal) {
+                clip-path: polygon(-1px 1px, 17px 1px, 17px 4px, 24px 4px, 24px 1px, 36px 1px, 36px 4px, 43px 4px, 43px 1px, 61px 1px, 61px 24px, -1px 24px);
+            }
+            svg {
+                height: 19px;
+                fill: var(--c-parts);
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translateY(var(--mouth-position));
+            }
+        }
+    }
+}
+
+.slider {
+    margin-top: 44px;
+    margin-bottom: -44px;
+    width: 100%;
+    max-width: 320px;
+    span {
+        color: #A6ACCD;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: italic;
+        display: block;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .rangeslider {
+        width: 100%;
+        height: 32px;
+        position: relative;
+        transform: translateZ(0);
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 15px;
+            height: 2px;
+            background: #E1E6F9;
+            border-radius: 1px;
+        }
+        .rangeslider__fill {
+            border-radius: 1px;
+            height: 2px;
+            top: 15px;
+            left: 0;
+            position: absolute;
+            background: #F6B360;
+        }
+        .rangeslider__handle {
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            background: #2B3044;
+            color: #fff;
+            border-radius: 50%;
+            cursor: grab;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            top: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+// Center & dribbble
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', Arial;
+    justify-content: center;
+    align-items: center;
+    background: #FAFBFF;
+    .button {
+        margin: 0 12px;
+    }
+    .dribbble {
+        position: fixed;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+        img {
+            display: block;
+            height: 28px;
+        }
+    }
+    .twitter {
+        position: fixed;
+        display: block;
+        right: 64px;
+        bottom: 14px;
+        svg {
+            width: 32px;
+            height: 32px;
+            fill: #1da1f2;
+        }
+    }
+}
