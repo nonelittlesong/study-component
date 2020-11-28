@@ -72,6 +72,14 @@
 }
 ```
 
+##### [蛋·危的探索](https://codepen.io/danwilson/pen/dqZvmx)
 
+蛋神用了三层：
+
+1. 顶层 — 使用 `radial-gradient` 修饰
+2. 中层 — 固定颜色
+3. 下层 — 图片
+
+`background-blend-mode` 可以像 `background` 那样，通过逗号分隔符，每层应用不同的混合模式。
 
 ### 1.2 边界的判定
