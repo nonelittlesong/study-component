@@ -1,0 +1,86 @@
+.display {
+  background: 
+    radial-gradient(circle, transparent 40%, var(--color-v) 75%),
+    linear-gradient(to right, var(--color), var(--color)),
+    var(--image2);
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: 
+    var(--blend-top, normal),
+    var(--blend-bottom, saturation),
+    normal;
+  
+  --image: url(https://images.unsplash.com/photo-1519522800923-7999b95cb3c6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=81c09a0eae279992234d18e52c8857fa);
+  --image2: url(https://images.unsplash.com/photo-1508533397692-5b12cd1a0eb2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=e5975c5e9135728ccb30eef021ffdc29);
+  
+  --color-v: black;
+  --color: grey; //hsla(343,100%,50%,.5);
+  
+  flex: 1;
+  width: 100vw;
+}
+
+
+
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: black;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: space-around;
+  padding: .75rem;
+  color: #fafcff;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 87.5%;
+  border-bottom: 3px double rgba(250,252,255, .67);
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+select {
+  font-size: 87.5%;
+}
+
+
+
+
+
+/* Addition for Edge, typically would do the inverse, but for a demo, using the negation support check */
+@supports not (background-blend-mode: saturation) {
+  .display {
+    --color: transparent;
+  }
+  form {
+    position: relative;
+  }
+  form::after {
+    content: 'Blend Modes are not supported in this browser';
+    background: rgba(0,0,0,.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+}

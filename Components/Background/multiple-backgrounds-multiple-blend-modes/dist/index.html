@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Multiple Backgrounds, Multiple Blend Modes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="display"></div>
+<form>
+  <div>
+    <label for="blend-top">Top Layer</label>
+    <select id="blend-top">
+      <option selected>normal</option>
+      <option>multiply</option>
+      <option>screen</option>
+      <option>overlay</option>
+      <option>darken</option>
+      <option>lighten</option>
+      <option>color-dodge</option>
+      <option>color-burn</option>
+      <option>hard-light</option>
+      <option>soft-light</option>
+      <option>difference</option>
+      <option>exclusion</option>
+      <option>hue</option>
+      <option>saturation</option>
+      <option>color</option>
+      <option>luminosity</option>
+    </select>
+  </div>
+  <div>
+    <label for="blend-bottom">Middle Layer</label>
+    <select id="blend-bottom">
+      <option>normal</option>
+      <option>multiply</option>
+      <option>screen</option>
+      <option>overlay</option>
+      <option>darken</option>
+      <option>lighten</option>
+      <option>color-dodge</option>
+      <option>color-burn</option>
+      <option>hard-light</option>
+      <option>soft-light</option>
+      <option>difference</option>
+      <option>exclusion</option>
+      <option>hue</option>
+      <option selected>saturation</option>
+      <option>color</option>
+      <option>luminosity</option>
+    </select>
+  </div>
+  <div>
+    <label for="color-v">Top Color</label>
+    <select id="color-v">
+      <option>transparent</option>
+      <option selected>black</option>
+      <option>green</option>
+      <option>red</option>
+      <option>hotpink</option>
+      <option>blue</option>
+      <option>yellow</option>
+      <option>orange</option>
+      <option>purple</option>
+    </select>
+  </div>
+  <div>
+    <label for="color">Middle Color</label>
+    <select id="color">
+      <option>transparent</option>
+      <option selected>grey</option>
+      <option>green</option>
+      <option>red</option>
+      <option>hotpink</option>
+      <option>blue</option>
+      <option>yellow</option>
+      <option>orange</option>
+      <option>purple</option>
+    </select>
+  </div>
+</form>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
