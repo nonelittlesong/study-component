@@ -19,13 +19,13 @@ data:[<mediatype>][;base64],<data>
 由四个部分组成：
 
 1. `data:` 前缀
-2. [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) 类型 — 默认 `text/plain;charset=US-ASCII`
-3. `base64`(当数据不是文本时)
-4. 数据本身
+2. `mediatype` [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) 类型 — 默认 `text/plain;charset=US-ASCII`
+3. `;base64` 当数据不是文本时
+4. `data` 数据本身
 
 栗子：
 
-- `data;,Hello%2C%20World!`  
+- `data:,Hello%2C%20World!`  
   简单的 `text/plain` 类型
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`  
   上面的 `base64` 编码版
