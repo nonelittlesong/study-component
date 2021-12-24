@@ -1,0 +1,40 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+div {
+  background: #ff7a18;
+  height: 250px;
+  width: 250px;
+}
+
+.animate {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: animate-fade;
+          animation-name: animate-fade;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
