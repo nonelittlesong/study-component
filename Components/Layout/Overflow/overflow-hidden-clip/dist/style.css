@@ -1,0 +1,46 @@
+body {
+  padding: 50px;
+}
+
+.group {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  margin: 25px auto auto;
+  position: relative;
+  max-width: 800px;
+}
+
+.group > div > div {
+  background: #ccc;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  height: 250px;
+  padding: 1.5rem;
+}
+.group > div:nth-child(1) > div {
+  overflow: hidden;
+}
+.group > div:nth-child(2) > div {
+  overflow: clip;
+  overflow-clip-margin: 25px;
+}
+.group h1 {
+  font-size: 1.5rem;
+}
+
+.notice {
+  background: #fff9c4;
+  color: #3e2723;
+  display: none;
+  padding: 15px;
+  margin: auto;
+  max-width: 775px;
+}
+
+@supports not (overflow-clip-margin: 0) {
+  .notice {
+    display: block;
+  }
+}
