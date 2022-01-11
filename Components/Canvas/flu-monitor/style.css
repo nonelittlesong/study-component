@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: .8rem;
+}
+
+canvas#canvas {
+  display: block;
+  background: #46b3b3;
+}
+
+div.controller {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 1.6rem;
+}
+
+div.controller > p {
+  font-size: 2.6rem;
+  color: #fff;
+}
+
