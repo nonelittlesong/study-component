@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+canvas#canvas {
+  display: block;
+  background: #000;
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);
+  background: linear-gradient(to bottom, #434343, #000000);
+}
+
+div.controller {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.6rem;
+}
